@@ -17,5 +17,12 @@ def symmetric_sequence(n):
     
     return result
 
-n = input("Введите число: ")
-print(symmetric_sequence(n))
+while True:
+    try:
+        n = input("Введите число: ")
+        result = symmetric_sequence(n)
+        print(result)
+        break 
+    except ValueError as e:
+        print(e)
+        print("Попробуйте еще раз!\n")
